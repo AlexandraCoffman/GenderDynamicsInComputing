@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Midterm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main-page">
+      <h1>How have gender dynamics shaped the development of computing?</h1>
+
+      <div class="options-section">
+        <h2 class="star-option" id="time">Timeline</h2>
+        <h2 class="star-option" id="chatbot">Chatbot</h2>
+        <h2 class="star-option" id="interactive-story">CYOA</h2>
+        <script>
+          document
+            .getElementById("interactive-story")
+            .addEventListener("click", function () {
+              document
+                .getElementById("cyoa-section")
+                .scrollIntoView({ behavior: "smooth" });
+            });
+          document
+            .getElementById("time")
+            .addEventListener("click", function () {
+              document
+                .getElementById("Eniac")
+                .scrollIntoView({ behavior: "smooth" });
+            });
+            document
+      .getElementById("chatbot")
+      .addEventListener("click", function () {
+        document
+          .getElementById("content-container")  
+          .scrollIntoView({ behavior: "smooth" });
+      });
+        </script>
+      </div>
+
+      <script>
+        window.onload = function () {
+          // First animation for main-page
+          const mainPage = document.getElementById("main-page");
+          mainPage.classList.add("animate-text");
+      
+          // Second animation for Eniac text
+          const eniacText = document.getElementById("Eniac");
+          eniacText.classList.add("animate-text");
+        };
+      </script>
+    </div>
+    
+    <div id="text">
+      <h2 id="Eniac">
+        The ENIAC project highlights how computing work was originally seen as
+        clerical and thus assigned to women. As computing gained more
+        prestige, these roles were reclassified as male-dominated professions,
+        pushing the groundbreaking contributions of women, like the ENIAC
+        programmers, into the background. This shift in how tech work was
+        defined has had a long-lasting effect on how we perceive the history
+        of computing and the role of women in technology.
+      </p>
+      <button id="cont">Continue</button>
+      <script>
+      document
+        .getElementById("cont")
+        .addEventListener("click", function () {
+          document
+            .getElementById("timeline")
+            .scrollIntoView({ behavior: "smooth" });
+        });</script>
+      
+     
+      <h2>
+        Explore the journey of these remarkable women and their groundbreaking contributions.
+      </h2>
+      <h2>Get ready to test your knowledge of these extraordinary women.</h2>
+      <br />
+    </div>
+
+    <div id="timeline">
+      <div class="container left" data-index="0">
+        <div class="content">
+          <h2>Ada Lovelace (1815-1852): The First Computer Programmer</h2>
+          <p>
+            Ada Lovelace developed the first algorithm for Charles Babbage’s
+            Analytical Engine, laying the foundation for computer programming.
+            Despite her visionary contributions, her work was largely
+            overshadowed due to her being a woman in Victorian society.
+          </p>
+        </div>
+      </div>
+      <div class="container right" data-index="1">
+        <div class="content">
+          <h2>Joan Clarke (1917-1996): Enigma Code Breaker</h2>
+          <p>
+            Joan Clarke played a crucial role in breaking the German Enigma code
+            during World War II but faced significant pay disparities and
+            discrimination as the only woman in her team. Her experience
+            reflects the broader issue of women’s undervalued contributions in
+            tech.
+          </p>
+        </div>
+      </div>
+      <div class="container left" data-index="2">
+        <div class="content">
+          <h2>Grace Hopper (1906-1992): Creator of COBOL</h2>
+          <p>
+            Grace Hopper pioneered the development of the first compiler and
+            COBOL, an early programming language. Despite resistance from her
+            male colleagues, she reshaped the field of programming, challenging
+            the perception that computers were solely for arithmetic.
+          </p>
+        </div>
+      </div>
+      <div class="container right" data-index="3">
+        <div class="content">
+          <h2>Kathleen Booth (Born 1922): Creator of Assembly Language</h2>
+          <p>
+            Kathleen Booth wrote the first assembly language and helped design
+            early computers with her husband. Her significant contributions are
+            often underrecognized, reflecting the tendency to downplay women’s
+            work when collaborating with male colleagues.
+          </p>
+        </div>
+      </div>
+      <div class="container left" data-index="4">
+        <div class="content">
+          <h2>
+            Margaret Hamilton (Born 1936): Director of Software Engineering at
+            MIT
+          </h2>
+          <p>
+            Margaret Hamilton led the development of software for the Apollo
+            program, coining the term “software engineering.” Her achievements
+            were groundbreaking in a male-dominated field, where software was
+            not initially seen as valuable as hardware engineering.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="quiz-section">
+      <h2>Test Your Knowledge!</h2>
+      <div id="question-container">
+        <p id="question-text">Click to begin.</p>
+        <button id="start-quiz">Start Quiz</button>
+        <div id="quiz-options" style="display: none">
+          <button class="quiz-choice" data-choice="0"></button>
+          <button class="quiz-choice" data-choice="1"></button>
+          <button class="quiz-choice" data-choice="2"></button>
+          <button class="quiz-choice" data-choice="3"></button>
+        </div>
+        <p id="feedback"></p>
+      </div>
+    </div>
+
+    <div id="content-container">
+      <div class="text-section">
+        <h2>Meet ELIZA 2.0!</h2>
+        <p>
+          In Your Computer is On Fire, Mar Hicks discusses how ELIZA, though a
+          simple chatbot and not a real person, was often sexualized and
+          subjected to gender stereotypes by users. ELIZA, designed as a digital
+          psychotherapist, became a vessel for users to project their desires
+          and behaviors, including sexual objectification. Despite its lack of
+          gender or identity, users treated it as a “female” presence,
+          reinforcing societal biases and stereotypes around women, particularly
+          in tech spaces. This shows how even non-human, gendered systems can be
+          objectified and mistreated in ways that reflect broader social
+          dynamics.
+        </p>
+        <p>
+          This directly ties into the theme of how gender dynamics have shaped
+          the development of computing. Just as women in early computing, such
+          as Ada Lovelace and Grace Hopper, often faced marginalization or had
+          their contributions minimized, systems like ELIZA, which users viewed
+          through a gendered lens, became subject to similar treatment. It
+          reveals how technology, even when it is gender-neutral, can still be
+          shaped and influenced by societal gender norms and biases.
+        </p>
+        <p>
+          Inspired by ELIZA, I wanted to create a simple version of the chatbot
+          with an added feature to counteract these issues: if the bot detects
+          inappropriate language, like the word “ugly,” it automatically ends
+          the conversation. This serves as a way to prevent the chatbot from
+          being subjected to rude or harmful behavior, something ELIZA couldn’t
+          do. By enforcing boundaries for respectful interaction, this chatbot
+          reflects an effort to challenge the objectification and mistreatment
+          that often occur with gendered systems, encouraging users to engage
+          more thoughtfully. In this way, the project not only highlights how
+          gender dynamics have influenced human interactions with computing
+          systems but also explores how we can programmatically resist and
+          reshape those dynamics moving forward.
+        </p>
+      </div>
+
+      <div id="chat-container">
+        <div id="chat-box">
+          <div id="conversation">
+            <p id="bot-message">
+              Hi, I'm New Eliza! How can I assist you today?
+            </p>
+          </div>
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message here..."
+          />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cyoa-section">
+      <h1>A Queer History of Computing</h1>
+
+      <div id="intro-section" class="story-section">
+        <p>
+          It's the early 1950s, and you are a mathematician at a time when the world of computing is just beginning to take shape. You are surrounded by pioneering figures—Alan Turing, Christopher Strachey, and others—who are laying the foundations for modern technology. However, this is also a time when societal norms, especially around gender and sexuality, are restrictive and discriminatory. You are faced with difficult choices: do you conform to these norms to survive, or do you push the boundaries in both your personal life and your work in computing?
+        </p>
+        <button class="choice-button" onclick="chooseOption('conform')">Conform to societal norms</button>
+        <button class="choice-button" onclick="chooseOption('push')">Push the boundaries</button>
+      </div>
+
+      <div id="conform-section" class="story-section hidden">
+        <p>
+          You choose to conform. Your work is focused purely on the technical aspects of computing, and though you excel in your field, you keep your personal life hidden. Like many queer figures in computing history, your contributions are recognized, but your identity is erased. You later realize that, by hiding your true self, you have contributed to a version of computing history that omits the diversity of voices that shaped it. Do you continue to stay silent, or do you decide to reclaim your identity?
+        </p>
+        <button class="choice-button" onclick="chooseOption('staySilent')">Stay silent</button>
+        <button class="choice-button" onclick="chooseOption('reclaim')">Reclaim your identity</button>
+      </div>
+
+      <div id="push-section" class="story-section hidden">
+        <p>
+          You choose to push the boundaries. Much like Christopher Strachey, who created the first love letter generator in the early 1950s, you see computing as a space for creative expression. Your work blurs the line between art and science, and your personal identity influences the experimental nature of your projects. However, society is not ready for this. Your colleagues dismiss your work, and your personal life becomes a subject of scrutiny. Do you continue your experimental work despite the criticism, or do you shift towards more conventional computing projects?
+        </p>
+        <button class="choice-button" onclick="chooseOption('continueExperiment')">Continue experimenting</button>
+        <button class="choice-button" onclick="chooseOption('shift')">Shift to conventional computing</button>
+      </div>
+      <div id="staySilent-section" class="story-section hidden">
+        <p>
+          You choose to stay silent. Though you are successful in your career, the erasure of your identity weighs heavily on you. You see how the history of computing develops without acknowledging the contributions of queer figures like Alan Turing, and you regret not speaking out. As computing becomes more influential, you wonder: could things have been different if you had pushed back against societal norms? Your legacy, though respected, is incomplete. 
+        </p>
+        <button class="choice-button" onclick="restartStory()">Restart Story</button>
+      </div>
+      <div id="reclaim-section" class="story-section hidden">
+        <p>
+          You choose to reclaim your identity. Inspired by the courage of figures like Alan Turing, you decide that your personal story deserves to be part of computing history. You openly express your identity and challenge the norms of the time. Though it is difficult, and there are personal and professional costs, your story becomes part of the growing narrative that queer figures played a pivotal role in the development of computing. You have helped to reshape the narrative of computing, ensuring that it reflects the diversity of its contributors.
+        </p>
+        <button class="choice-button" onclick="restartStory()">Restart Story</button>
+      </div>
+      <div id="continueExperiment-section" class="story-section hidden">
+        <p>
+          You choose to continue your experimental work. Like Strachey’s love letter generator, your projects are ahead of their time and challenge conventional ideas about what computing can be. Your work gains recognition in creative circles, but it is dismissed by the mainstream computing community. However, you find a community of like-minded thinkers who see the potential in your blend of art and computing, and over time, your contributions are recognized as foundational to computational art. 
+        </p>
+        <button class="choice-button" onclick="restartStory()">Restart Story</button>
+      </div>
+      <div id="shift-section" class="story-section hidden">
+        <p>
+          You choose to shift towards more conventional computing projects. Your work gains widespread recognition, and you make significant contributions to programming and mathematics. However, your earlier creative projects—those that were influenced by your identity—are forgotten. Though you are celebrated in the computing world, you feel as though a part of your story has been lost, much like how Christopher Strachey's contributions to both art and science were overshadowed by his technical achievements.
+        </p>
+        <button class="choice-button" onclick="restartStory()">Restart Story</button>
+      </div>
+    
+      <script>
+        function chooseOption(option) {
+          document.querySelectorAll('.story-section').forEach(section => {
+            section.classList.add('hidden');
+          });
+          if (option === 'conform') {
+            document.getElementById('conform-section').classList.remove('hidden');
+          } else if (option === 'push') {
+            document.getElementById('push-section').classList.remove('hidden');
+          } else if (option === 'staySilent') {
+            document.getElementById('staySilent-section').classList.remove('hidden');
+          } else if (option === 'reclaim') {
+            document.getElementById('reclaim-section').classList.remove('hidden');
+          } else if (option === 'continueExperiment') {
+            document.getElementById('continueExperiment-section').classList.remove('hidden');
+          } else if (option === 'shift') {
+            document.getElementById('shift-section').classList.remove('hidden');
+          }
+        }
+    
+        function restartStory() {
+          document.querySelectorAll('.story-section').forEach(section => {
+            section.classList.add('hidden');
+          });
+          document.getElementById('intro-section').classList.remove('hidden');
+        }
+      </script>
+    </div>
+
+    <script src="chatbot.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
